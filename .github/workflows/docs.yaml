@@ -1,0 +1,76 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**/README.md'
+
+  workflow_dispatch:
+
+jobs:
+  get-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      folders: ${{ steps.get-changed.outputs.all_changed_files }}
+      count: ${{ steps.get-changed.outputs.all_changed_files_count }}
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Get changed files
+        id: get-changed
+        uses: tj-actions/changed-files@v37
+        with:
+          files: |
+            **/README.md
+          dir_names: true
+          dir_names_max_depth: 1
+          json: true
+          escape_json: false
+
+      - name: Print info
+        id: print-info
+        run: |
+          echo folders: "${{ steps.get-changed.outputs.all_changed_files }}"
+          echo count: "${{ steps.get-changed.outputs.all_changed_files_count }}"
+
+  build-matrix:
+    needs:
+      - get-matrix
+    if: needs.get-matrix.outputs.count > 0
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        folder: ${{ fromJson(needs.get-matrix.outputs.folders) }}
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Create additional environment variables
+        id: create-env-vars
+        run: |
+          echo "REPOSITORY=${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.folder }}" >> $GITHUB_ENV
+
+      - name: Print info
+        id: print-info
+        run: |
+          echo folder: ${{ matrix.folder }}
+          echo repository: $REPOSITORY
+
+      - name: Update docker hub description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ${{ env.REPOSITORY }}
+          readme-filepath: ${{ matrix.folder }}/README.md
