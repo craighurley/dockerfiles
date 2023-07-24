@@ -1,5 +1,5 @@
 FROM        python:3.10.8-alpine3.16
-ARG         VERSION=3.2.0
+ARG         VERSION=3.3.1
 RUN         apk update \
             && apk add --no-cache git
 RUN         pip3 install --no-cache-dir \

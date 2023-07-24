@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.1
+
+- Update `sceptre` to `3.3.1`
+
 ## 3.2.0
 
 - Update `sceptre` to `3.2.0`
