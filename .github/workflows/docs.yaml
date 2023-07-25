@@ -64,8 +64,8 @@ jobs:
       - name: Print info
         id: print-info
         run: |
-          echo folder: ${{ matrix.folder }}
           echo repository: $REPOSITORY
+          echo folder: ${{ matrix.folder }}
 
       - name: Update docker hub description
         uses: peter-evans/dockerhub-description@v3

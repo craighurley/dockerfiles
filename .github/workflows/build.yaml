@@ -82,19 +82,19 @@ jobs:
       - name: Create additional environment variables
         id: create-env-vars
         run: |
+          echo "REPOSITORY=${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.folder }}" >> $GITHUB_ENV
           if grep -i --quiet 'VERSION=' ${{ matrix.folder }}/Dockerfile ; then
             echo "VERSION=$(grep "VERSION=" ${{ matrix.folder }}/Dockerfile | cut -d '=' -f 2)" >> $GITHUB_ENV
           else
             echo "VERSION=latest" >> $GITHUB_ENV
           fi
-          echo "REPOSITORY=${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.folder }}" >> $GITHUB_ENV
 
       - name: Print info
         id: print-info
         run: |
+          echo repository: $REPOSITORY
           echo folder: ${{ matrix.folder }}
           echo version: $VERSION
-          echo repository: $REPOSITORY
 
       - name: Build and publish container
         id: build-push
