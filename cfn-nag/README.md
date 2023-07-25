@@ -1,4 +1,4 @@
-# docker-cfn-nag
+# cfn-nag
 
 Run `cfn_nag` in a container.
 

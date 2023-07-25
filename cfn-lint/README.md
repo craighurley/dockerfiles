@@ -1,4 +1,4 @@
-# docker-cfn-lint
+# cfn-lint
 
 Run `cfn-lint` in a container.
 
