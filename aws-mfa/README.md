@@ -1,4 +1,4 @@
-# docker-aws-mfa
+# aws-mfa
 
 Run `aws-mfa` in a container.
 
