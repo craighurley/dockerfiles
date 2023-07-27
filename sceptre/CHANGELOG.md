@@ -3,6 +3,7 @@
 ## 3.3.1
 
 - Update `sceptre` to `3.3.1`
+- Update `alpine` to `latest`
 
 ## 3.2.0
 

@@ -2,7 +2,7 @@
 
 ## 1.0.11
 
-- Update: org-formation-cli:1.0.11, node:18.16, alpine:3.18
+- Update: org-formation-cli:1.0.11, node:18.16, alpine:latest
 
 ## 1.0.2
 

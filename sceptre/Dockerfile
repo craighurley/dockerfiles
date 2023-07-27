@@ -1,4 +1,4 @@
-FROM        python:3.10.8-alpine3.16
+FROM        python:3.10-alpine
 ARG         VERSION=3.3.1
 RUN         apk update \
             && apk add --no-cache git
