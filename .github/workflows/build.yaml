@@ -9,6 +9,7 @@ on:
       - '.gitignore'
       - '**/CHANGELOG.md'
       - '**/README.md'
+      - 'pull.sh'
       - 'README.md'
 
   workflow_dispatch:
@@ -36,6 +37,7 @@ jobs:
             .gitignore
             **/CHANGELOG.md
             **/README.md
+            pull.sh
             README.md
           dir_names: true
           dir_names_max_depth: 1
