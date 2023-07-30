@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.79.5
+
+- Update: cfn-lint:0.79.5
+
 ## 0.79.4
 
 - Update: cfn-lint:0.79.4
