@@ -95,7 +95,6 @@ jobs:
         id: print-info
         run: |
           echo repository: $REPOSITORY
-          echo folder: ${{ matrix.folder }}
           echo version: $VERSION
 
       - name: Build and publish container
