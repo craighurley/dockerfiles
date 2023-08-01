@@ -1,5 +1,5 @@
 FROM        python:3.11-alpine
-ARG         VERSION=0.79.5
+ARG         VERSION=0.79.6
 RUN         pip3 install --no-cache-dir \
                             cfn-lint==${VERSION} \
                             pydot
