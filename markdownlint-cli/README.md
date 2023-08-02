@@ -17,3 +17,4 @@ alias markdownlint='docker run --rm -v "$PWD":/workdir:ro craighurley/markdownli
 ## Links
 
 - <https://github.com/igorshubovych/markdownlint-cli>
+- <https://github.com/DavidAnson/markdownlint>
