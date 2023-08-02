@@ -7,10 +7,12 @@ on:
     paths-ignore:
       - '.github/**'
       - '.gitignore'
+      - '.yamllint'
       - '**/CHANGELOG.md'
       - '**/README.md'
       - 'pull.sh'
       - 'README.md'
+      - 'Taskfile.yaml'
 
   workflow_dispatch:
 
@@ -35,10 +37,12 @@ jobs:
           files_ignore: |
             .github/**
             .gitignore
+            .yamllint
             **/CHANGELOG.md
             **/README.md
             pull.sh
             README.md
+            Taskfile.yaml
           dir_names: true
           dir_names_max_depth: 1
           json: true
