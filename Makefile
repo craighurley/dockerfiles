@@ -30,10 +30,10 @@ help:
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 .PHONY: help
 
-## Remove orphaned images etc.
+## Remove orphaned images, volumes, networks etc.
 clean:
 	@echo $@
-	docker rmi "$$(docker images -f 'dangling=true' -q)" ; true
+	docker system prune --volumes -f
 .PHONY: clean
 
 ## Run linters
