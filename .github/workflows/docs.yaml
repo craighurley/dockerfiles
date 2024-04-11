@@ -19,13 +19,13 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
       - name: Get changed files
         id: get-changed
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v44
         with:
           files: |
             **/README.md
@@ -52,7 +52,7 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
@@ -67,7 +67,7 @@ jobs:
           echo repository: $REPOSITORY
 
       - name: Update docker hub description
-        uses: peter-evans/dockerhub-description@v3
+        uses: peter-evans/dockerhub-description@v4
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
