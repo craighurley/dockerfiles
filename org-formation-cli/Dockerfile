@@ -1,4 +1,4 @@
-FROM        node:18.16-alpine
+FROM        node:lts-alpine
 ARG         VERSION=1.0.14
 RUN         npm install -g --production aws-organization-formation@${VERSION}
 WORKDIR     /workdir
