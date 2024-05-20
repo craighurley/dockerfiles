@@ -1,7 +1,7 @@
-FROM        alpine:3.18.2
-ARG         VERSION=0.9.0-r1
+FROM        alpine:3
+ARG         VERSION=0.9.0-r4
 RUN         apk update \
-            && apk add --no-cache shellcheck=0.9.0-r1
+            && apk add --no-cache shellcheck=${VERSION}
 WORKDIR     /workdir/
 ENTRYPOINT  [ "shellcheck" ]
 CMD         ["--help"]
