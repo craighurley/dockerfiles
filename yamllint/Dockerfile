@@ -1,4 +1,4 @@
-FROM        python:3.11-alpine
+FROM        python:3.12-alpine
 ARG         VERSION=1.35.1
 RUN         pip3 install --no-cache-dir \
                             yamllint==${VERSION}

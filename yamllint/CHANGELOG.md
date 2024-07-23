@@ -1,8 +1,9 @@
 # Changelog
 
-## 1.32.0
+## 1.35.1
 
 - Update: yamllint:1.35.1
+- Update: python:3.12
 
 ## 1.32.0
 
