@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.4.2
+
+- Update `sceptre` to `4.4.2`
+- Update `sceptre-s3-packager` to `0.4.0`
+- Update `sceptre-sam-handler` to `1.0.0`
+- Remove `sceptre-myip-resolver`
+
 ## 3.3.1
 
 - Update `sceptre` to `3.3.1`
