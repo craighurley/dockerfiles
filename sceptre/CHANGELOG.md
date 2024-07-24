@@ -3,7 +3,7 @@
 ## 3.3.1
 
 - Update `sceptre` to `3.3.1`
-- Update `python` to `3.10`
+- Update `python` to `3.12`
 - Update `alpine` to `latest`
 
 ## 3.2.0
