@@ -1,5 +1,6 @@
-FROM        python:3.12-alpine
-ARG         VERSION=1.35.1
+# 2025-04-24 17:40:03
+FROM        python:3.13-alpine
+ARG         VERSION=1.37.0
 RUN         pip3 install --no-cache-dir \
                             yamllint==${VERSION}
 WORKDIR     /workdir/

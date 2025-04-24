@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.34.1
+
+- Update: cfn-lint:1.34.1
+- Update: python:3.13
+
 ## 1.8.2
 
 - Update: cfn-lint:1.8.2

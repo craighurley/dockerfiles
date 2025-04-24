@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.5.3
+
+- Update `sceptre` to `4.5.3`
+- Update `python` to `3.13`
+
 ## 4.4.2
 
 - Update `sceptre` to `4.4.2`

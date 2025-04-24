@@ -1,5 +1,6 @@
-FROM        python:3.12-alpine
-ARG         VERSION=4.4.2
+# 2025-04-24 17:40:03
+FROM        python:3.13-alpine
+ARG         VERSION=4.5.3
 RUN         apk update \
             && apk add --no-cache git
 RUN         pip3 install --no-cache-dir \

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.44.0
+
+- Update: markdownlint-cli:0.44.0
+
 ## 0.41.0
 
 - Update: markdownlint-cli:0.41.0
