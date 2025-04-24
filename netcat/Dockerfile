@@ -1,7 +1,6 @@
-# 2025-04-24 20:15:24
+# 2025-04-24 20:47:19
 FROM        alpine:3
-ARG         VERSION=1.226.1.1-r0
 RUN         apk update \
-            && apk add --no-cache netcat-openbsd=${VERSION}
+            && apk add --no-cache netcat-openbsd
 WORKDIR     /workdir
 ENTRYPOINT  [ "nc" ]

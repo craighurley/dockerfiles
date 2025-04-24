@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025-04-24 20:47:19
+
+- Use the latest version of shellcheck
+
 ## 0.10.0-r1
 
 - Update: shellcheck:0.10.0-r1
