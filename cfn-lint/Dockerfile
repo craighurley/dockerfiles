@@ -6,5 +6,6 @@ RUN         pip3 install --no-cache-dir \
                             pydot
 WORKDIR     /workdir/
 ENV         AWS_PROFILE=default
+USER        guest
 ENTRYPOINT  [ "cfn-lint" ]
 CMD         ["--help"]

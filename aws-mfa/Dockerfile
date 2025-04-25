@@ -5,4 +5,5 @@ RUN         pip3 install --no-cache-dir \
                 aws-mfa==${VERSION}
 WORKDIR     /workdir
 ENV         AWS_PROFILE=default
+USER        guest
 ENTRYPOINT  [ "aws-mfa" ]

@@ -12,4 +12,5 @@ RUN         pip3 install --no-cache-dir \
                 sceptre-ssm-resolver==1.2.2 \
                 sceptre-stack-termination-protection-hook==1.1.0
 WORKDIR     /workdir
+USER        guest
 ENTRYPOINT  [ "sceptre" ]
